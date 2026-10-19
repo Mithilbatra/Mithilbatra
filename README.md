@@ -54,7 +54,7 @@ I'm a Computer Science undergrad at **NIT Delhi** who likes building things end 
       </ul>
       <img src="https://skillicons.dev/icons?i=py,flask,sklearn,docker" alt="Python, Flask, scikit-learn, Docker" /><br/><br/>
       <a href="https://github.com/Mithilbatra/F1_ML_project"><img src="https://img.shields.io/badge/Code-181717?style=flat-square&logo=github&logoColor=white" alt="Code" /></a>
-      <a href="https://mithilbatra.github.io/F1_ML_project/"><img src="https://img.shields.io/badge/Live_Demo-70A5FD?style=flat-square" alt="Live demo" /></a>
+      <a href="http:mithil-f1-pitwall.duckdns.org"><img src="https://img.shields.io/badge/Live_Demo-70A5FD?style=flat-square" alt="Live demo" /></a>
     </td>
     <td width="33%" valign="top">
       <h3>🚨 Resolvr</h3>
@@ -77,6 +77,7 @@ I'm a Computer Science undergrad at **NIT Delhi** who likes building things end 
       </ul>
       <img src="https://skillicons.dev/icons?i=nextjs,postgres,tailwind" alt="Next.js, PostgreSQL, Tailwind" /><br/><br/>
       <a href="https://github.com/Mithilbatra/automated_ai_interviewer"><img src="https://img.shields.io/badge/Code-181717?style=flat-square&logo=github&logoColor=white" alt="Code" /></a>
+      <a href="https://automated-ai-interviewer-nbog.vercel.app"><img src="https://img.shields.io/badge/Live_Demo-70A5FD?style=flat-square" alt="Live demo" /></a>
     </td>
   </tr>
 </table>
