@@ -4,7 +4,7 @@
 </p>
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=BB9AF7&center=true&vCenter=true&width=640&lines=Software+Engineering+Intern+%40+HSBC;Backend+%E2%80%A2+Full-Stack+%E2%80%A2+Machine+Learning;Spring+Boot+%7C+Next.js+%7C+Python+%7C+GCP;800%2B+DSA+problems+solved;Lights+out+and+away+we+go+%F0%9F%8F%81" alt="Software Engineering Intern @ HSBC · Backend · Full-Stack · Machine Learning" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=BB9AF7&center=true&vCenter=true&width=640&lines=Software+Engineering+Intern+%40+HSBC;Backend+%E2%80%A2+Full-Stack+%E2%80%A2+Machine+Learning;Spring+Boot+%7C+Next.js+%7C+Python+%7C+GCP;800%2B+DSA+problems+solved" alt="Software Engineering Intern @ HSBC · Backend · Full-Stack · Machine Learning" />
 </p>
 
 <p align="center">
@@ -12,12 +12,6 @@
   <a href="mailto:mithil.batra05@gmail.com"><img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
   <a href="https://leetcode.com/mithilbatra"><img src="https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=black" alt="LeetCode" /></a>
   <a href="https://www.hackerrank.com/profile/mithil_batra05"><img src="https://img.shields.io/badge/HackerRank-2EC866?style=for-the-badge&logo=hackerrank&logoColor=white" alt="HackerRank" /></a>
-</p>
-
-<p align="center">
-  <img src="https://komarev.com/ghpvc/?username=Mithilbatra&label=PROFILE%20VIEWS&color=7aa2f7&style=flat-square" alt="Profile views" />
-  <a href="https://github.com/Mithilbatra?tab=followers"><img src="https://img.shields.io/github/followers/Mithilbatra?label=FOLLOWERS&style=flat-square&color=bb9af7&logo=github" alt="GitHub followers" /></a>
-  <img src="https://img.shields.io/badge/STATUS-BUILDING_COOL_STUFF-9ece6a?style=flat-square" alt="Status: building cool stuff" />
 </p>
 
 <p align="center"><img src="assets/divider.svg" width="100%" alt="" /></p>
@@ -64,61 +58,50 @@
 
 ## 🚀 Featured projects
 
-<table>
-  <tr>
-    <td colspan="2"><a href="https://github.com/Mithilbatra/F1_ML_project"><img src="assets/pitwall.svg" width="100%" alt="Pit Wall: F1 podium prediction and live timing dashboard" /></a></td>
-  </tr>
-  <tr>
-    <td width="45%" valign="top">
-      <p>F1 podium prediction and analytics dashboard built on live FastF1 timing and telemetry data.</p>
-      <img height="36" src="https://skillicons.dev/icons?i=py,flask,sklearn,docker" alt="Python, Flask, scikit-learn, Docker" /><br/><br/>
-      <a href="https://github.com/Mithilbatra/F1_ML_project"><img src="https://img.shields.io/badge/Code-181717?style=for-the-badge&logo=github&logoColor=white" alt="Code" /></a>
-      <a href="http://mithil-f1-pitwall.duckdns.org"><img src="https://img.shields.io/badge/Live_Demo-7aa2f7?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Live demo" /></a>
-    </td>
-    <td valign="top">
-      <ul>
-        <li>Leakage-safe features with walk-forward backtesting across 3 seasons</li>
-        <li>Random Forest vs gradient boosting, scored on Top-3 Hit Rate and PR-AUC</li>
-        <li>Automated live ingestion and daily retraining, Dockerized</li>
-      </ul>
-    </td>
-  </tr>
-  <tr>
-    <td colspan="2"><a href="https://github.com/Mithilbatra/Resolvr---An-Issue-Tracker-Incident-Escalation-System"><img src="assets/resolvr.svg" width="100%" alt="Resolvr: incident management and alerting platform" /></a></td>
-  </tr>
-  <tr>
-    <td width="45%" valign="top">
-      <p>Incident management and alerting platform for on-call teams.</p>
-      <img height="36" src="https://skillicons.dev/icons?i=nextjs,nodejs,postgres,tailwind" alt="Next.js, Node.js, PostgreSQL, Tailwind" /><br/><br/>
-      <a href="https://github.com/Mithilbatra/Resolvr---An-Issue-Tracker-Incident-Escalation-System"><img src="https://img.shields.io/badge/Code-181717?style=for-the-badge&logo=github&logoColor=white" alt="Code" /></a>
-    </td>
-    <td valign="top">
-      <ul>
-        <li>Kanban incident workflow with manual and webhook/API-driven creation</li>
-        <li>On-call scheduling, escalation policies and multi-channel notifications</li>
-        <li>Incident timelines and runbooks in one place</li>
-      </ul>
-    </td>
-  </tr>
-  <tr>
-    <td colspan="2"><a href="https://github.com/Mithilbatra/automated_ai_interviewer"><img src="assets/interviewer.svg" width="100%" alt="AI Mock Interviewer: Gemini-powered mock interview platform" /></a></td>
-  </tr>
-  <tr>
-    <td width="45%" valign="top">
-      <p>Automated mock interview platform powered by the Google Gemini API.</p>
-      <img height="36" src="https://skillicons.dev/icons?i=nextjs,postgres,tailwind" alt="Next.js, PostgreSQL, Tailwind" /><br/><br/>
-      <a href="https://github.com/Mithilbatra/automated_ai_interviewer"><img src="https://img.shields.io/badge/Code-181717?style=for-the-badge&logo=github&logoColor=white" alt="Code" /></a>
-      <a href="https://automated-ai-interviewer-nbog.vercel.app"><img src="https://img.shields.io/badge/Live_Demo-7aa2f7?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Live demo" /></a>
-    </td>
-    <td valign="top">
-      <ul>
-        <li>Questions tailored by role, industry and experience level</li>
-        <li>AI answer evaluation with personalised feedback</li>
-        <li>PostgreSQL store for sessions, questions, answers and scores</li>
-      </ul>
-    </td>
-  </tr>
-</table>
+<a href="https://github.com/Mithilbatra/F1_ML_project"><img src="assets/pitwall.svg" width="100%" alt="Pit Wall: F1 podium prediction and live timing dashboard" /></a>
+
+F1 podium prediction and analytics dashboard built on live FastF1 timing and telemetry data.
+
+- Leakage-safe features with walk-forward backtesting across 3 seasons
+- Random Forest vs gradient boosting, scored on Top-3 Hit Rate and PR-AUC
+- Automated live ingestion and daily retraining, Dockerized
+
+<p>
+  <a href="https://github.com/Mithilbatra/F1_ML_project"><img src="https://img.shields.io/badge/Code-181717?style=for-the-badge&logo=github&logoColor=white" alt="Code" /></a>
+  <a href="http://mithil-f1-pitwall.duckdns.org"><img src="https://img.shields.io/badge/Live_Demo-7aa2f7?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Live demo" /></a>
+  &nbsp;&nbsp;<img height="28" src="https://skillicons.dev/icons?i=py,flask,sklearn,docker" alt="Python, Flask, scikit-learn, Docker" />
+</p>
+
+<br/>
+
+<a href="https://github.com/Mithilbatra/Resolvr---An-Issue-Tracker-Incident-Escalation-System"><img src="assets/resolvr.svg" width="100%" alt="Resolvr: incident management and alerting platform" /></a>
+
+Incident management and alerting platform for on-call teams.
+
+- Kanban incident workflow with manual and webhook/API-driven creation
+- On-call scheduling, escalation policies and multi-channel notifications
+- Incident timelines and runbooks in one place
+
+<p>
+  <a href="https://github.com/Mithilbatra/Resolvr---An-Issue-Tracker-Incident-Escalation-System"><img src="https://img.shields.io/badge/Code-181717?style=for-the-badge&logo=github&logoColor=white" alt="Code" /></a>
+  &nbsp;&nbsp;<img height="28" src="https://skillicons.dev/icons?i=nextjs,nodejs,postgres,tailwind" alt="Next.js, Node.js, PostgreSQL, Tailwind" />
+</p>
+
+<br/>
+
+<a href="https://github.com/Mithilbatra/automated_ai_interviewer"><img src="assets/interviewer.svg" width="100%" alt="AI Mock Interviewer: Gemini-powered mock interview platform" /></a>
+
+Automated mock interview platform powered by the Google Gemini API.
+
+- Questions tailored by role, industry and experience level
+- AI answer evaluation with personalised feedback
+- PostgreSQL store for sessions, questions, answers and scores
+
+<p>
+  <a href="https://github.com/Mithilbatra/automated_ai_interviewer"><img src="https://img.shields.io/badge/Code-181717?style=for-the-badge&logo=github&logoColor=white" alt="Code" /></a>
+  <a href="https://automated-ai-interviewer-nbog.vercel.app"><img src="https://img.shields.io/badge/Live_Demo-7aa2f7?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Live demo" /></a>
+  &nbsp;&nbsp;<img height="28" src="https://skillicons.dev/icons?i=nextjs,postgres,tailwind" alt="Next.js, PostgreSQL, Tailwind" />
+</p>
 
 <p align="center">More of my work lives in <a href="https://github.com/Mithilbatra/openCodes"><b>openCodes</b></a>.</p>
 
@@ -202,5 +185,5 @@ Software Engineering · Database Management Systems · Machine Learning · Artif
 </p>
 
 <p align="center">
-  <img src="assets/footer.svg" width="100%" alt="Thanks for stopping by the pit wall" />
+  <img src="assets/footer.svg" width="100%" alt="Thanks for visiting. Open to conversations about backend systems, machine learning and building products end to end." />
 </p>

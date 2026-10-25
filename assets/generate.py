@@ -60,8 +60,8 @@ def grid(w, hz, h, n=10, period=3.0):
            f'@keyframes hl {{ from {{ transform: translateY(0); opacity: 0; }} 25% {{ opacity: .9; }} to {{ transform: translateY({h - hz}px); opacity: 1; }} }}')
     body = (f'<rect x="0" y="{hz}" width="{w}" height="{h - hz}" fill="url(#floorG)"/>'
             f'<g clip-path="url(#floor)" stroke="{PURPLE}" stroke-width="1.2"><g opacity=".45">{rays}</g>{rows}</g>'
-            f'<line x1="0" x2="{w}" y1="{hz}" y2="{hz}" stroke="url(#hzG)" stroke-width="10" opacity=".5" filter="url(#blur)"/>'
-            f'<line x1="0" x2="{w}" y1="{hz}" y2="{hz}" stroke="url(#hzG)" stroke-width="2.5"/>')
+            f'<rect x="0" y="{hz - 5}" width="{w}" height="10" fill="url(#hzG)" opacity=".5" filter="url(#blur)"/>'
+            f'<rect x="0" y="{hz - 1.25}" width="{w}" height="2.5" fill="url(#hzG)"/>')
     return defs, css, body
 
 
@@ -260,35 +260,19 @@ text {{ font-size: 46px; font-weight: 800; fill: {FG}; font-variant-numeric: tab
 
 
 def divider():
-    W, H = 1200, 64
-    kerb = ''.join(f'<rect x="{x}" y="54" width="24" height="4" fill="{RED if (x // 24) % 2 else FG}"/>' for x in range(0, W, 24))
-    wheel = lambda cx, cy, r: (f'<g transform="translate({cx} {cy})"><g class="wheel"><circle r="{r}" fill="#0b0c14" stroke="#3b4261" stroke-width="2"/>'
-                               f'<path d="M-{r - 3} 0H{r - 3}M0 -{r - 3}V{r - 3}" stroke="{MUTED}" stroke-width="1.6"/><circle r="3" fill="{SURFACE}"/></g></g>')
-    defs = (GLOW + grad('fade', [(0, '#000'), (0.1, '#fff'), (0.9, '#fff'), (1, '#000')])
-            + f'<mask id="ends"><rect width="{W}" height="{H}" fill="url(#fade)"/></mask>'
-            + grad('carG', [(0, PURPLE), (1, BLUE)]) + grad('trail', [(0, '#7aa2f700'), (1, BLUE)]))
+    W, H, Y = 1200, 28, 14
+    defs = (GLOW + BLUR + grad('line', [(0, '#7aa2f700'), (0.2, BLUE), (0.5, PURPLE), (0.8, MAGENTA), (1, '#ff007c00')])
+            + grad('pulse', [(0, '#7dcfff00'), (0.5, CYAN), (1, '#7dcfff00')]))
     css = f'''
-.car {{ transform: translate(530px, 16px); animation: drive 6s cubic-bezier(.6,0,.4,1) infinite; }}
-@keyframes drive {{ 0% {{ transform: translate(-200px, 16px); }} 55%, 100% {{ transform: translate(1260px, 16px); }} }}
-.wheel {{ transform-box: fill-box; transform-origin: center; animation: spin .25s linear infinite; }}
-@keyframes spin {{ to {{ transform: rotate(360deg); }} }}
-.speed {{ animation: flicker .18s steps(2) infinite; }}
-@keyframes flicker {{ 50% {{ opacity: .35; }} }}
+.pulse {{ opacity: 0; animation: sweep 5s cubic-bezier(.45,0,.55,1) infinite; }}
+@keyframes sweep {{ 0% {{ opacity: 0; transform: translateX(-220px); }} 12%, 80% {{ opacity: 1; }} 100% {{ opacity: 0; transform: translateX({W}px); }} }}
+.gem {{ transform-box: fill-box; transform-origin: center; animation: gem 2.5s ease-in-out infinite alternate; }}
+@keyframes gem {{ from {{ opacity: .45; }} }}
 '''
-    body = f'''<g mask="url(#ends)" opacity=".6">{kerb}</g>
-<g class="car">
-  <g class="speed" stroke-linecap="round"><rect x="-130" y="20" width="125" height="7" rx="3.5" fill="url(#trail)"/>
-    <line x1="-90" y1="12" x2="-20" y2="12" stroke="url(#trail)" stroke-width="2"/><line x1="-70" y1="34" x2="-12" y2="34" stroke="url(#trail)" stroke-width="2"/></g>
-  <circle class="speed" cx="4" cy="25" r="4" fill="{ORANGE}" filter="url(#glow)"/>
-  <path d="M2 6h22v5H10v16H4z" fill="{PURPLE}"/>
-  <path d="M10 30L14 22L34 20L48 12L62 11L68 16L76 18L106 21L128 26L136 30V33L10 34Z" fill="url(#carG)" filter="url(#glow)"/>
-  <path d="M36 26L104 23" stroke="{CYAN}" stroke-width="2"/>
-  <circle cx="61" cy="14" r="4" fill="{YELLOW}"/>
-  <path d="M52 15Q61 6 73 16" stroke="{FG}" stroke-width="2.2" fill="none"/>
-  <rect x="118" y="32" width="24" height="3" fill="{FG}"/><rect x="139" y="27" width="3" height="8" fill="{FG}"/>
-  {wheel(28, 32, 10)}{wheel(110, 33, 9)}
-</g>'''
-    write('divider.svg', W, H, 'Divider: an F1 car racing along a kerb', defs, css, body)
+    body = f'''<rect x="0" y="{Y - 0.75}" width="{W}" height="1.5" fill="url(#line)" opacity=".8"/>
+<g class="pulse"><rect x="0" y="{Y - 3}" width="220" height="6" fill="url(#pulse)" filter="url(#blur)"/><rect x="0" y="{Y - 1}" width="220" height="2" fill="url(#pulse)"/></g>
+<rect class="gem" x="{W / 2 - 5}" y="{Y - 5}" width="10" height="10" fill="{BG}" stroke="{PURPLE}" stroke-width="1.5" transform="rotate(45 {W / 2} {Y})" filter="url(#glow)"/>'''
+    write('divider.svg', W, H, 'Section divider', defs, css, body)
 
 
 TECH_ROWS = [
@@ -472,33 +456,28 @@ def interviewer():
 
 
 def footer():
-    W, H, HZ = 1200, 230, 180
+    W, H, HZ = 1200, 230, 190
     gdefs, gcss, gbody = grid(W, HZ, H, n=6, period=2.4)
-
-    def flag(pole, direction):
-        strips = ''.join(
-            f'<rect x="{pole + (2 + i * 10 if direction > 0 else -12 - i * 10)}" y="44" width="10.5" height="76" fill="url(#chk)" class="wave" '
-            f'style="--a:{1 + i * 0.6:.1f}px;animation-delay:-{i * 0.09:.2f}s"/>' for i in range(12))
-        return f'<line x1="{pole}" y1="38" x2="{pole}" y2="{HZ}" stroke="{FG}" stroke-width="3" stroke-linecap="round"/>{strips}'
-    defs = (SKY + FLOOR + HZ_LINE + GLOW + BLUR + gdefs + grad('ftG', [(0, CYAN), (0.5, PURPLE), (1, MAGENTA)])
+    defs = (SKY + FLOOR + HZ_LINE + GLOW + BLUR + gdefs + grad('ftG', [(0, CYAN), (0.5, BLUE), (1, PURPLE)])
+            + grad('sunG', [(0, ORANGE), (0.55, MAGENTA), (1, PURPLE)], 0, 1)
             + f'<clipPath id="frame"><rect width="{W}" height="{H}" rx="20"/></clipPath>'
-            + f'<pattern id="chk" width="19" height="19" patternUnits="userSpaceOnUse"><rect width="19" height="19" fill="{FG}"/><rect width="9.5" height="9.5" fill="{BG2}"/><rect x="9.5" y="9.5" width="9.5" height="9.5" fill="{BG2}"/></pattern>')
-    css = TWINKLE + gcss + '''
-.wave { animation: wave .9s ease-in-out infinite alternate; }
-@keyframes wave { from { transform: translateY(calc(var(--a) * -1)); } to { transform: translateY(var(--a)); } }
-.big { font-size: 28px; font-weight: 900; font-style: italic; letter-spacing: 2px; }
-.small { font-size: 14px; letter-spacing: 2px; fill: #9aa5ce; }
+            + f'<clipPath id="above"><rect width="{W}" height="{HZ}"/></clipPath>')
+    css = TWINKLE + gcss + f'''
+.big {{ font-size: 42px; font-weight: 800; letter-spacing: 10px; }}
+.line {{ font-size: 20px; fill: {FG}; }}
+.contact {{ font-size: 16px; fill: {COMMENT}; letter-spacing: 1px; }}
 '''
     body = f'''<g clip-path="url(#frame)">
 <rect width="{W}" height="{H}" fill="url(#sky)"/>
 {stars(random.Random(11), 40, W, HZ - 10)}
+<circle cx="600" cy="{HZ}" r="90" fill="url(#sunG)" opacity=".35" filter="url(#blur)" clip-path="url(#above)"/>
 {gbody}
-{flag(110, 1)}{flag(W - 110, -1)}
-<text x="600" y="96" text-anchor="middle" class="big" fill="url(#ftG)" filter="url(#glow)">THANKS FOR STOPPING BY THE PIT WALL</text>
-<text x="600" y="130" text-anchor="middle" class="small mono">lights out and away we go  ›  let's build something</text>
+<text x="600" y="76" text-anchor="middle" class="big" fill="url(#ftG)" filter="url(#glow)">THANKS FOR VISITING</text>
+<text x="600" y="120" text-anchor="middle" class="line">Open to conversations about backend systems, machine learning and building products end to end.</text>
+<text x="600" y="156" text-anchor="middle" class="contact mono">mithil.batra05@gmail.com · linkedin.com/in/mithilbatra211205</text>
 </g>
 <rect x="1" y="1" width="{W - 2}" height="{H - 2}" rx="20" fill="none" stroke="{BORDER}" stroke-width="2"/>'''
-    write('footer.svg', W, H, 'Thanks for stopping by the pit wall', defs, css, body)
+    write('footer.svg', W, H, 'Thanks for visiting. Open to conversations about backend systems, machine learning and building products end to end. mithil.batra05@gmail.com', defs, css, body)
 
 
 if __name__ == '__main__':
