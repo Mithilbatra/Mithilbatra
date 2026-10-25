@@ -1,6 +1,6 @@
 <!-- Header -->
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:1a1b27,100:70a5fd&height=200&section=header&text=Mithil%20Batra&fontSize=60&fontColor=ffffff&fontAlignY=35&desc=Software%20Engineer%20%E2%80%A2%20CSE%20%40%20NIT%20Delhi&descSize=18&descAlignY=58" alt="Mithil Batra" width="100%" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:1a1b27,100:70a5fd&height=220&section=header&text=Mithil%20Batra&fontSize=64&fontColor=ffffff&fontAlignY=36&desc=Software%20Engineer%20%E2%80%A2%20CSE%20%40%20NIT%20Delhi&descSize=18&descAlignY=58&animation=fadeIn" alt="Mithil Batra" width="100%" />
 </p>
 
 <p align="center">
@@ -8,13 +8,11 @@
 </p>
 
 <p align="center">
-  <a href="https://www.linkedin.com/in/mithilbatra211205"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge" alt="LinkedIn" /></a>
+  <a href="https://www.linkedin.com/in/mithilbatra211205"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI%2BPHBhdGggZmlsbD0id2hpdGUiIGQ9Ik0yMC40NDcgMjAuNDUyaC0zLjU1NHYtNS41NjljMC0xLjMyOC0uMDI3LTMuMDM3LTEuODUyLTMuMDM3LTEuODUzIDAtMi4xMzYgMS40NDUtMi4xMzYgMi45Mzl2NS42NjdIOS4zNTFWOWgzLjQxNHYxLjU2MWguMDQ2Yy40NzctLjkgMS42MzctMS44NSAzLjM3LTEuODUgMy42MDEgMCA0LjI2NyAyLjM3IDQuMjY3IDQuNDU1djYuMjg2ek01LjMzNyA3LjQzM2MtMS4xNDQgMC0yLjA2My0uOTI2LTIuMDYzLTIuMDY1IDAtMS4xMzguOTItMi4wNjMgMi4wNjMtMi4wNjMgMS4xNCAwIDIuMDY0LjkyNSAyLjA2NCAyLjA2MyAwIDEuMTM5LS45MjUgMi4wNjUtMi4wNjQgMi4wNjV6bTEuNzgyIDEzLjAxOUgzLjU1NVY5aDMuNTY0djExLjQ1MnpNMjIuMjI1IDBIMS43NzFDLjc5MiAwIDAgLjc3NCAwIDEuNzI5djIwLjU0MkMwIDIzLjIyNy43OTIgMjQgMS43NzEgMjRoMjAuNDUxQzIzLjIgMjQgMjQgMjMuMjI3IDI0IDIyLjI3MVYxLjcyOUMyNCAuNzc0IDIzLjIgMCAyMi4yMjIgMGguMDAzeiIvPjwvc3ZnPg%3D%3D" alt="LinkedIn" /></a>
   <a href="mailto:mithil.batra05@gmail.com"><img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
   <a href="https://leetcode.com/mithilbatra"><img src="https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=black" alt="LeetCode" /></a>
   <a href="https://www.hackerrank.com/profile/mithil_batra05"><img src="https://img.shields.io/badge/HackerRank-2EC866?style=for-the-badge&logo=hackerrank&logoColor=white" alt="HackerRank" /></a>
 </p>
-
----
 
 ## 👨‍💻 About me
 
@@ -27,89 +25,105 @@ I'm a Computer Science undergrad at **NIT Delhi** who likes building things end 
 - 🧩 **800+** problems solved across coding platforms
 - 📫 Reach me at **mithil.batra05@gmail.com**
 
----
-
 ## 💼 Experience
 
-### HSBC · Software Engineering Intern
-`June 2026 – July 2026`
-
-- Enhanced an internal **TDS chatbot** with better intent recognition, response generation and workflow automation for employee tax queries
-- Integrated the **Vidura microservice** into the GPS portal (service and API integration, environment configuration)
-- Supported the **Panorama** application on **Spring Boot + GCP** through production bug fixes and code-quality improvements
-
----
+<table>
+  <tr>
+    <td width="130" align="center" valign="top">
+      <br/>
+      <img src="https://img.shields.io/badge/HSBC-DB0011?style=for-the-badge&logo=hsbc&logoColor=white" alt="HSBC" /><br/>
+      <sub>Jun 2026 – Jul 2026</sub>
+    </td>
+    <td valign="top">
+      <h3>Software Engineering Intern</h3>
+      <ul>
+        <li>Enhanced an internal <b>TDS chatbot</b> with better intent recognition, response generation and workflow automation for employee tax queries</li>
+        <li>Integrated the <b>Vidura microservice</b> into the GPS portal (service and API integration, environment configuration)</li>
+        <li>Supported the <b>Panorama</b> application on <b>Spring Boot + GCP</b> through production bug fixes and code-quality improvements</li>
+      </ul>
+    </td>
+  </tr>
+</table>
 
 ## 🚀 Featured projects
 
 <table>
   <tr>
-    <td width="33%" valign="top">
+    <td width="42%" valign="top">
       <h3>🏎️ Pit Wall</h3>
       <p>F1 podium prediction and analytics dashboard built on live FastF1 timing and telemetry data.</p>
+      <img height="36" src="https://skillicons.dev/icons?i=py,flask,sklearn,docker" alt="Python, Flask, scikit-learn, Docker" /><br/><br/>
+      <a href="https://github.com/Mithilbatra/F1_ML_project"><img src="https://img.shields.io/badge/Code-181717?style=flat-square&logo=github&logoColor=white" alt="Code" /></a>
+      <a href="http://mithil-f1-pitwall.duckdns.org"><img src="https://img.shields.io/badge/Live_Demo-70A5FD?style=flat-square&logo=googlechrome&logoColor=white" alt="Live demo" /></a>
+    </td>
+    <td valign="top">
+      <br/>
       <ul>
         <li>Leakage-safe features with walk-forward backtesting across 3 seasons</li>
         <li>Random Forest vs gradient boosting, scored on Top-3 Hit Rate and PR-AUC</li>
         <li>Automated live ingestion and daily retraining, Dockerized</li>
       </ul>
-      <img src="https://skillicons.dev/icons?i=py,flask,sklearn,docker" alt="Python, Flask, scikit-learn, Docker" /><br/><br/>
-      <a href="https://github.com/Mithilbatra/F1_ML_project"><img src="https://img.shields.io/badge/Code-181717?style=flat-square&logo=github&logoColor=white" alt="Code" /></a>
-      <a href="http:mithil-f1-pitwall.duckdns.org"><img src="https://img.shields.io/badge/Live_Demo-70A5FD?style=flat-square" alt="Live demo" /></a>
     </td>
-    <td width="33%" valign="top">
+  </tr>
+  <tr>
+    <td width="42%" valign="top">
       <h3>🚨 Resolvr</h3>
       <p>Incident management and alerting platform for on-call teams.</p>
+      <img height="36" src="https://skillicons.dev/icons?i=nextjs,nodejs,postgres,tailwind" alt="Next.js, Node.js, PostgreSQL, Tailwind" /><br/><br/>
+      <a href="https://github.com/Mithilbatra/Resolvr---An-Issue-Tracker-Incident-Escalation-System"><img src="https://img.shields.io/badge/Code-181717?style=flat-square&logo=github&logoColor=white" alt="Code" /></a>
+    </td>
+    <td valign="top">
+      <br/>
       <ul>
         <li>Kanban incident workflow with manual and webhook/API-driven creation</li>
         <li>On-call scheduling, escalation policies and multi-channel notifications</li>
         <li>Incident timelines and runbooks in one place</li>
       </ul>
-      <img src="https://skillicons.dev/icons?i=nextjs,nodejs,postgres,tailwind" alt="Next.js, Node.js, PostgreSQL, Tailwind" /><br/><br/>
-      <a href="https://github.com/Mithilbatra/Resolvr---An-Issue-Tracker-Incident-Escalation-System"><img src="https://img.shields.io/badge/Code-181717?style=flat-square&logo=github&logoColor=white" alt="Code" /></a>
     </td>
-    <td width="33%" valign="top">
+  </tr>
+  <tr>
+    <td width="42%" valign="top">
       <h3>🎤 AI Mock Interviewer</h3>
       <p>Automated mock interview platform powered by the Google Gemini API.</p>
+      <img height="36" src="https://skillicons.dev/icons?i=nextjs,postgres,tailwind" alt="Next.js, PostgreSQL, Tailwind" /><br/><br/>
+      <a href="https://github.com/Mithilbatra/automated_ai_interviewer"><img src="https://img.shields.io/badge/Code-181717?style=flat-square&logo=github&logoColor=white" alt="Code" /></a>
+      <a href="https://automated-ai-interviewer-nbog.vercel.app"><img src="https://img.shields.io/badge/Live_Demo-70A5FD?style=flat-square&logo=googlechrome&logoColor=white" alt="Live demo" /></a>
+    </td>
+    <td valign="top">
+      <br/>
       <ul>
         <li>Questions tailored by role, industry and experience level</li>
         <li>AI answer evaluation with personalised feedback</li>
         <li>PostgreSQL store for sessions, questions, answers and scores</li>
       </ul>
-      <img src="https://skillicons.dev/icons?i=nextjs,postgres,tailwind" alt="Next.js, PostgreSQL, Tailwind" /><br/><br/>
-      <a href="https://github.com/Mithilbatra/automated_ai_interviewer"><img src="https://img.shields.io/badge/Code-181717?style=flat-square&logo=github&logoColor=white" alt="Code" /></a>
-      <a href="https://automated-ai-interviewer-nbog.vercel.app"><img src="https://img.shields.io/badge/Live_Demo-70A5FD?style=flat-square" alt="Live demo" /></a>
     </td>
   </tr>
 </table>
 
 <p align="center">More of my work lives in <a href="https://github.com/Mithilbatra/openCodes"><b>openCodes</b></a>.</p>
 
----
-
 ## 🛠️ Tech stack
 
-| | |
-|:--|:--|
-| **Languages** | <img src="https://skillicons.dev/icons?i=java,py,c,cpp,js,ts" alt="Java, Python, C, C++, JavaScript, TypeScript" /> |
-| **Frameworks** | <img src="https://skillicons.dev/icons?i=spring,nextjs,react,nodejs,flask,tailwind,opencv" alt="Spring, Next.js, React, Node.js, Flask, Tailwind CSS, OpenCV" /> |
-| **Databases** | <img src="https://skillicons.dev/icons?i=postgres,mysql,mongodb" alt="PostgreSQL, MySQL, MongoDB" /> |
-| **Cloud & DevOps** | <img src="https://skillicons.dev/icons?i=gcp,aws,azure,docker,git,github" alt="GCP, AWS, Azure, Docker, Git, GitHub" /> |
-| **AI / ML** | <img src="https://skillicons.dev/icons?i=sklearn" alt="scikit-learn" /> &nbsp; Pandas · Machine Learning · Deep Learning |
-| **Tools** | <img src="https://skillicons.dev/icons?i=postman,figma,arduino" alt="Postman, Figma, Arduino" /> |
-| **Core** | REST APIs · Microservices · Webhooks · DSA · OOP · Design Patterns |
-
----
+<table>
+  <tr><td><b>Languages</b></td><td><img src="https://skillicons.dev/icons?i=java,py,c,cpp,js,ts" alt="Java, Python, C, C++, JavaScript, TypeScript" /></td></tr>
+  <tr><td><b>Frameworks</b></td><td><img src="https://skillicons.dev/icons?i=spring,nextjs,react,nodejs,flask,tailwind,opencv" alt="Spring, Next.js, React, Node.js, Flask, Tailwind CSS, OpenCV" /></td></tr>
+  <tr><td><b>Databases</b></td><td><img src="https://skillicons.dev/icons?i=postgres,mysql,mongodb" alt="PostgreSQL, MySQL, MongoDB" /></td></tr>
+  <tr><td><b>Cloud &amp; DevOps</b></td><td><img src="https://skillicons.dev/icons?i=gcp,aws,azure,docker,git,github" alt="GCP, AWS, Azure, Docker, Git, GitHub" /></td></tr>
+  <tr><td><b>AI / ML</b></td><td><img src="https://skillicons.dev/icons?i=sklearn" alt="scikit-learn" /> &nbsp; <img src="https://img.shields.io/badge/Pandas-150458?style=flat-square&logo=pandas&logoColor=white" alt="Pandas" /> <img src="https://img.shields.io/badge/Machine_Learning-1a1b27?style=flat-square" alt="Machine Learning" /> <img src="https://img.shields.io/badge/Deep_Learning-1a1b27?style=flat-square" alt="Deep Learning" /></td></tr>
+  <tr><td><b>Tools</b></td><td><img src="https://skillicons.dev/icons?i=postman,figma,arduino" alt="Postman, Figma, Arduino" /></td></tr>
+  <tr><td><b>Core</b></td><td>REST APIs · Microservices · Webhooks · DSA · OOP · Design Patterns</td></tr>
+</table>
 
 ## 🏆 Achievements & leadership
 
-| | |
-|:--|:--|
-| 🎯 | **99.467 percentile** in JEE Main (top 0.5% nationwide) · JEE Advanced **AIR 5376** |
-| 🥇 | **Gold** at MST Tournament 2025, NIT Jaipur |
-| 🏁 | **Quarter-finalist**, Flipkart Grid and L'Oréal Sustainability Challenge |
-| 👥 | **Deputy General Secretary**, Google Developer Student Clubs, NIT Delhi |
-| 📣 | **Executive**, Training and Placement Cell, NIT Delhi |
-| 💡 | **800+** problems solved across coding platforms |
+<table>
+  <tr><td>🎯</td><td><b>99.467 percentile</b> in JEE Main (top 0.5% nationwide) · JEE Advanced <b>AIR 5376</b></td></tr>
+  <tr><td>🥇</td><td><b>Gold</b> at MST Tournament 2025, NIT Jaipur</td></tr>
+  <tr><td>🏁</td><td><b>Quarter-finalist</b>, Flipkart Grid and L'Oréal Sustainability Challenge</td></tr>
+  <tr><td>👥</td><td><b>Deputy General Secretary</b>, Google Developer Student Clubs, NIT Delhi</td></tr>
+  <tr><td>📣</td><td><b>Executive</b>, Training and Placement Cell, NIT Delhi</td></tr>
+  <tr><td>💡</td><td><b>800+</b> problems solved across coding platforms</td></tr>
+</table>
 
 <details>
   <summary><b>📜 Certifications</b></summary>
@@ -137,8 +151,6 @@ I'm a Computer Science undergrad at **NIT Delhi** who likes building things end 
 
 Software Engineering · Database Management Systems · Machine Learning · Artificial Intelligence · Natural Language Processing · Computer Vision · Data Mining · Pattern Recognition · Quantum Computing · Probability and Statistics · Optimization Techniques
 </details>
-
----
 
 ## 📊 GitHub & LeetCode stats
 
