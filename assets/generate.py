@@ -74,7 +74,7 @@ def hero():
   <text x="100" y="162" font-size="76" font-weight="700" fill="{FG}" letter-spacing="-1">Mithil Batra</text>
   <text x="102" y="204" font-size="24" fill="{COMMENT}">Software Engineer · CSE @ NIT Delhi</text>
 </g>
-<text x="102" y="244" class="mono rise" font-size="15" letter-spacing="3" style="animation-delay:.25s"><tspan fill="{BLUE}">BACKEND</tspan><tspan fill="{MUTED}"> / </tspan><tspan fill="{PURPLE}">FULL-STACK</tspan><tspan fill="{MUTED}"> / </tspan><tspan fill="{GREEN}">MACHINE LEARNING</tspan></text>'''
+<text x="102" y="244" class="mono rise" font-size="17" letter-spacing="3" style="animation-delay:.25s"><tspan fill="{BLUE}">BACKEND</tspan><tspan fill="{MUTED}"> / </tspan><tspan fill="{PURPLE}">FULL-STACK</tspan><tspan fill="{MUTED}"> / </tspan><tspan fill="{GREEN}">MACHINE LEARNING</tspan></text>'''
     defs = CARD + BLUR + grad('accent', [(0, BLUE), (1, PURPLE)], 0, 1) + grad('accentX', [(0, BLUE), (1, PURPLE)])
     write('hero.svg', W, H, 'Mithil Batra — Software Engineer · CSE @ NIT Delhi', defs, CARD_CSS, card(W, H, (980, 160), body))
 
@@ -189,7 +189,7 @@ def stats():
         body.append(f'<text x="{x + TW / 2:.1f}" y="124" text-anchor="middle" class="lbl">{escape(label)}</text>')
     css = f'''
 text {{ font-size: 44px; font-weight: 700; fill: {FG}; font-variant-numeric: tabular-nums; }}
-.lbl {{ font-size: 11.5px; font-weight: 700; letter-spacing: 2.2px; fill: {COMMENT}; }}
+.lbl {{ font-size: 13px; font-weight: 700; letter-spacing: 1.4px; fill: {COMMENT}; }}
 .roll {{ animation: roll 2.4s cubic-bezier(.15,.75,.25,1) both; }}
 @keyframes roll {{ from {{ transform: translateY(0); }} }}
 '''
@@ -199,9 +199,9 @@ text {{ font-size: 44px; font-weight: 700; fill: {FG}; font-variant-numeric: tab
 def footer():
     W, H = 1200, 170
     body = f'''
-<text x="600" y="68" text-anchor="middle" font-size="30" font-weight="600" fill="{FG}">Thanks for visiting</text>
-<text x="600" y="102" text-anchor="middle" font-size="18" fill="{COMMENT}">Open to conversations about backend systems, machine learning and building products end to end.</text>
-<text x="600" y="134" text-anchor="middle" class="mono" font-size="15" fill="{BLUE}">mithil.batra05@gmail.com · linkedin.com/in/mithilbatra211205</text>'''
+<text x="600" y="68" text-anchor="middle" font-size="34" font-weight="600" fill="{FG}">Thanks for visiting</text>
+<text x="600" y="106" text-anchor="middle" font-size="22" fill="{COMMENT}">Open to conversations about backend systems, machine learning and building products end to end.</text>
+<text x="600" y="142" text-anchor="middle" class="mono" font-size="18" fill="{BLUE}">mithil.batra05@gmail.com · linkedin.com/in/mithilbatra211205</text>'''
     write('footer.svg', W, H, 'Thanks for visiting. Open to conversations about backend systems, machine learning and building products end to end. mithil.batra05@gmail.com', CARD + BLUR, CARD_CSS, card(W, H, (200, 20), body))
 
 
@@ -229,7 +229,7 @@ def browser(x, y, w, url, shot):
             f'<rect x="{x}" y="{y}" width="{w}" height="{ih + 34}" rx="12" fill="{BG2}" stroke="{BORDER}" stroke-width="1.5"/>'
             + ''.join(f'<circle cx="{x + 20 + i * 18}" cy="{y + 17}" r="5.5" fill="{c}"/>' for i, c in enumerate((RED, YELLOW, GREEN)))
             + f'<rect x="{x + w / 2 - 150}" y="{y + 7}" width="300" height="20" rx="10" fill="{SURFACE}"/>'
-            f'<text x="{x + w / 2}" y="{y + 21}" text-anchor="middle" class="mono" font-size="12" fill="{COMMENT}">{escape(url)}</text>'
+            f'<text x="{x + w / 2}" y="{y + 21}" text-anchor="middle" class="mono" font-size="13" fill="{COMMENT}">{escape(url)}</text>'
             f'<image x="{x}" y="{y + 34}" width="{w}" height="{ih}" preserveAspectRatio="xMidYMin slice" clip-path="url(#shot)" href="data:image/jpeg;base64,{data}"/>')
 
 
@@ -264,29 +264,29 @@ def phone(cx, y):
 
 
 def project_card(p):
-    W, H = 1200, 460
+    W, H = 1200, 480
     a = p['accent']
-    body = [f'<text x="56" y="92" class="mono" font-size="13" letter-spacing="3" fill="{a}">{escape(p["kicker"])}</text>',
+    body = [f'<text x="56" y="92" class="mono" font-size="15" letter-spacing="3" fill="{a}">{escape(p["kicker"])}</text>',
             f'<text x="56" y="146" font-size="44" font-weight="700" fill="{FG}">{escape(p["name"])}</text>']
-    body += [f'<text x="56" y="{188 + i * 28}" font-size="19" fill="{COMMENT}">{escape(line)}</text>' for i, line in enumerate(p['desc'])]
+    body += [f'<text x="56" y="{190 + i * 30}" font-size="21" fill="{COMMENT}">{escape(line)}</text>' for i, line in enumerate(p['desc'])]
     for i, point in enumerate(p['points']):
-        y = 274 + i * 34
-        body.append(f'<circle cx="62" cy="{y - 6}" r="4" fill="{a}"/><text x="78" y="{y}" font-size="17" fill="{FG}">{escape(point)}</text>')
-    x, y = 56, 370
+        y = 284 + i * 36
+        body.append(f'<circle cx="62" cy="{y - 7}" r="4.5" fill="{a}"/><text x="80" y="{y}" font-size="19" fill="{FG}">{escape(point)}</text>')
+    x, y = 56, 392
     for name in p['stack']:
-        w = len(name) * 8.2 + 28
-        if x + w > 520:
-            x, y = 56, y + 38
-        body.append(f'<rect x="{x}" y="{y}" width="{w:.0f}" height="30" rx="15" fill="{a}" fill-opacity=".1" stroke="{a}" stroke-opacity=".45"/>'
-                    f'<text x="{x + w / 2:.0f}" y="{y + 20}" text-anchor="middle" font-size="14" fill="{FG}">{escape(name)}</text>')
+        w = len(name) * 9.4 + 32
+        if x + w > 560:
+            x, y = 56, y + 42
+        body.append(f'<rect x="{x}" y="{y}" width="{w:.0f}" height="34" rx="17" fill="{a}" fill-opacity=".1" stroke="{a}" stroke-opacity=".45"/>'
+                    f'<text x="{x + w / 2:.0f}" y="{y + 23}" text-anchor="middle" font-size="16" fill="{FG}">{escape(name)}</text>')
         x += w + 8
     if p['shot']:
-        body.append(browser(560, 43, 600, p['url'], p['shot']))
+        body.append(browser(588, 44, 572, p['url'], p['shot']))
     else:
-        body.append(phone(860, 20))
-        body.append(f'<text x="1010" y="440" class="mono" font-size="11" fill="{MUTED}">illustration</text>')
+        body.append(phone(874, 30))
+        body.append(f'<text x="1026" y="466" class="mono" font-size="13" fill="{MUTED}">illustration</text>')
     label = f'{p["name"]}: {" ".join(p["desc"])} ' + '; '.join(p['points']) + '. Built with ' + ', '.join(p['stack']) + '.'
-    write(f'project-{p["file"]}.svg', W, H, label, CARD + BLUR, '', card(W, H, (980, 230), ''.join(body), tint=a))
+    write(f'project-{p["file"]}.svg', W, H, label, CARD + BLUR, '', card(W, H, (990, 240), ''.join(body), tint=a))
 
 
 def projects():
@@ -341,14 +341,14 @@ def github_stats(user):
         x += w
     body.append(f'<rect x="{x:.1f}" y="62" width="{828 - x:.1f}" height="10" fill="{SURFACE}"/></g>')
     for i, (name, (size, color)) in enumerate(top):
-        lx, ly = 452 + (i % 2) * 196, 106 + (i // 2) * 30
-        body.append(f'<circle cx="{lx + 5}" cy="{ly - 5}" r="5" fill="{color}"/><text x="{lx + 18}" y="{ly}" class="k">{escape(name)}</text>'
-                    f'<text x="{lx + 180}" y="{ly}" text-anchor="end" class="p">{100 * size / total:.1f}%</text>')
+        lx, ly = 452 + (i % 2) * 200, 106 + (i // 2) * 30
+        body.append(f'<circle cx="{lx + 5}" cy="{ly - 5}" r="5" fill="{color}"/>'
+                    f'<text x="{lx + 18}" y="{ly}" class="k">{escape(name)}<tspan class="p" dx="6">{100 * size / total:.1f}%</tspan></text>')
     css = f'''
-.h {{ font-size: 16px; font-weight: 600; fill: {FG}; }}
-.k {{ font-size: 14px; fill: {COMMENT}; }}
-.v {{ font-size: 15px; font-weight: 600; fill: {FG}; font-variant-numeric: tabular-nums; }}
-.p {{ font-size: 13px; fill: {MUTED}; font-variant-numeric: tabular-nums; }}
+.h {{ font-size: 18px; font-weight: 600; fill: {FG}; }}
+.k {{ font-size: 15px; fill: {COMMENT}; }}
+.v {{ font-size: 17px; font-weight: 600; fill: {FG}; font-variant-numeric: tabular-nums; }}
+.p {{ font-size: 14px; fill: {MUTED}; font-variant-numeric: tabular-nums; }}
 '''
     label = 'GitHub activity: ' + ', '.join(f'{k} {v}' for k, v in rows) + '. Top languages: ' + ', '.join(n for n, _ in top)
     write('github-stats.svg', W, H, label, '', css, ''.join(body))

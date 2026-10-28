@@ -19,5 +19,5 @@ text { font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Ne
   <text x="100" y="162" font-size="76" font-weight="700" fill="#e6edf3" letter-spacing="-1">Mithil Batra</text>
   <text x="102" y="204" font-size="24" fill="#8b949e">Software Engineer · CSE @ NIT Delhi</text>
 </g>
-<text x="102" y="244" class="mono rise" font-size="15" letter-spacing="3" style="animation-delay:.25s"><tspan fill="#7aa2f7">BACKEND</tspan><tspan fill="#6e7681"> / </tspan><tspan fill="#bb9af7">FULL-STACK</tspan><tspan fill="#6e7681"> / </tspan><tspan fill="#9ece6a">MACHINE LEARNING</tspan></text></g><rect x="1" y="1" width="1198" height="318" rx="16" fill="none" stroke="#30363d" stroke-width="2"/>
+<text x="102" y="244" class="mono rise" font-size="17" letter-spacing="3" style="animation-delay:.25s"><tspan fill="#7aa2f7">BACKEND</tspan><tspan fill="#6e7681"> / </tspan><tspan fill="#bb9af7">FULL-STACK</tspan><tspan fill="#6e7681"> / </tspan><tspan fill="#9ece6a">MACHINE LEARNING</tspan></text></g><rect x="1" y="1" width="1198" height="318" rx="16" fill="none" stroke="#30363d" stroke-width="2"/>
 </svg>
