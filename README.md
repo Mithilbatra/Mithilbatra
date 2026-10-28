@@ -29,7 +29,9 @@ Computer Science undergrad at **NIT Delhi** who builds things end to end, from S
 
 ## Experience
 
-**Software Engineering Intern · HSBC** &nbsp;<sub>Jun 2026 – Jul 2026</sub>
+### Software Engineering Intern · HSBC
+
+**Jun 2026 – Jul 2026**
 
 - Enhanced an internal **TDS chatbot** with better intent recognition, response generation and workflow automation for employee tax queries
 - Integrated the **Vidura microservice** into the GPS portal (service and API integration, environment configuration)
@@ -38,15 +40,15 @@ Computer Science undergrad at **NIT Delhi** who builds things end to end, from S
 ## Selected projects
 
 <a href="http://mithil-f1-pitwall.duckdns.org"><img src="assets/project-pitwall.svg" width="100%" alt="Pit Wall: F1 podium prediction and analytics dashboard on live FastF1 data" /></a>
-<p align="center"><sub><a href="https://github.com/Mithilbatra/F1_ML_project">Code</a> &nbsp;·&nbsp; <a href="http://mithil-f1-pitwall.duckdns.org">Live demo</a></sub></p>
+<p align="center"><a href="https://github.com/Mithilbatra/F1_ML_project"><b>Code</b></a> &nbsp;·&nbsp; <a href="http://mithil-f1-pitwall.duckdns.org"><b>Live demo</b></a></p>
 
 <a href="https://github.com/Mithilbatra/Resolvr---An-Issue-Tracker-Incident-Escalation-System"><img src="assets/project-resolvr.svg" width="100%" alt="Resolvr: mobile issue tracker with incident alerts and auto-escalation" /></a>
-<p align="center"><sub><a href="https://github.com/Mithilbatra/Resolvr---An-Issue-Tracker-Incident-Escalation-System">Code</a></sub></p>
+<p align="center"><a href="https://github.com/Mithilbatra/Resolvr---An-Issue-Tracker-Incident-Escalation-System"><b>Code</b></a></p>
 
 <a href="https://automated-ai-interviewer-nbog.vercel.app"><img src="assets/project-interviewer.svg" width="100%" alt="AI Mock Interviewer: Gemini-powered mock interviews with graded feedback" /></a>
-<p align="center"><sub><a href="https://github.com/Mithilbatra/automated_ai_interviewer">Code</a> &nbsp;·&nbsp; <a href="https://automated-ai-interviewer-nbog.vercel.app">Live demo</a></sub></p>
+<p align="center"><a href="https://github.com/Mithilbatra/automated_ai_interviewer"><b>Code</b></a> &nbsp;·&nbsp; <a href="https://automated-ai-interviewer-nbog.vercel.app"><b>Live demo</b></a></p>
 
-<sub>More of my work lives in [openCodes](https://github.com/Mithilbatra/openCodes).</sub>
+More of my work lives in **[openCodes](https://github.com/Mithilbatra/openCodes)**.
 
 ## Tech stack
 
