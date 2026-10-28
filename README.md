@@ -37,35 +37,14 @@ Computer Science undergrad at **NIT Delhi** who builds things end to end, from S
 
 ## Selected projects
 
-### Pit Wall
+<a href="http://mithil-f1-pitwall.duckdns.org"><img src="assets/project-pitwall.svg" width="100%" alt="Pit Wall: F1 podium prediction and analytics dashboard on live FastF1 data" /></a>
+<p align="center"><sub><a href="https://github.com/Mithilbatra/F1_ML_project">Code</a> &nbsp;·&nbsp; <a href="http://mithil-f1-pitwall.duckdns.org">Live demo</a></sub></p>
 
-F1 podium prediction and analytics dashboard built on live FastF1 timing and telemetry data.
+<a href="https://github.com/Mithilbatra/Resolvr---An-Issue-Tracker-Incident-Escalation-System"><img src="assets/project-resolvr.svg" width="100%" alt="Resolvr: mobile issue tracker with incident alerts and auto-escalation" /></a>
+<p align="center"><sub><a href="https://github.com/Mithilbatra/Resolvr---An-Issue-Tracker-Incident-Escalation-System">Code</a></sub></p>
 
-- Leakage-safe features with walk-forward backtesting across 3 seasons
-- Random Forest vs gradient boosting, scored on Top-3 Hit Rate and PR-AUC
-- Automated live ingestion and daily retraining, Dockerized
-
-<sub>**Stack:** Python · Flask · scikit-learn · Docker &nbsp;|&nbsp; [Code](https://github.com/Mithilbatra/F1_ML_project) · [Live demo](http://mithil-f1-pitwall.duckdns.org)</sub>
-
-### Resolvr
-
-Incident management and alerting platform for on-call teams.
-
-- Kanban incident workflow with manual and webhook/API-driven creation
-- On-call scheduling, escalation policies and multi-channel notifications
-- Incident timelines and runbooks in one place
-
-<sub>**Stack:** Next.js · Node.js · PostgreSQL · Tailwind CSS &nbsp;|&nbsp; [Code](https://github.com/Mithilbatra/Resolvr---An-Issue-Tracker-Incident-Escalation-System)</sub>
-
-### AI Mock Interviewer
-
-Automated mock interview platform powered by the Google Gemini API.
-
-- Questions tailored by role, industry and experience level
-- AI answer evaluation with personalised feedback
-- PostgreSQL store for sessions, questions, answers and scores
-
-<sub>**Stack:** Next.js · PostgreSQL · Tailwind CSS · Gemini API &nbsp;|&nbsp; [Code](https://github.com/Mithilbatra/automated_ai_interviewer) · [Live demo](https://automated-ai-interviewer-nbog.vercel.app)</sub>
+<a href="https://automated-ai-interviewer-nbog.vercel.app"><img src="assets/project-interviewer.svg" width="100%" alt="AI Mock Interviewer: Gemini-powered mock interviews with graded feedback" /></a>
+<p align="center"><sub><a href="https://github.com/Mithilbatra/automated_ai_interviewer">Code</a> &nbsp;·&nbsp; <a href="https://automated-ai-interviewer-nbog.vercel.app">Live demo</a></sub></p>
 
 <sub>More of my work lives in [openCodes](https://github.com/Mithilbatra/openCodes).</sub>
 
