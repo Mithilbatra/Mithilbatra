@@ -3,6 +3,7 @@
 
 `python3 assets/generate.py --github-stats DIR` fetches live GitHub numbers (needs GITHUB_TOKEN) and writes DIR/github-stats.svg.
 """
+import base64
 import json
 import os
 import sys
@@ -46,12 +47,12 @@ CARD = (grad('cardBg', [(0, BG2), (1, BG)], 1, 1)
         + '<pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1" fill="#30363d"/></pattern>')
 
 
-def card(w, h, glow_at, body):
+def card(w, h, glow_at, body, tint=BLUE):
     """Dark rounded panel with a dot grid and one soft, slowly drifting accent glow."""
     gx, gy = glow_at
     return (f'<defs><clipPath id="frame"><rect width="{w}" height="{h}" rx="16"/></clipPath></defs><g clip-path="url(#frame)">'
             f'<rect width="{w}" height="{h}" fill="url(#cardBg)"/><rect width="{w}" height="{h}" fill="url(#dots)" opacity=".55"/>'
-            f'<circle class="drift" cx="{gx}" cy="{gy}" r="260" fill="{BLUE}" opacity=".16" filter="url(#blur)"/>'
+            f'<circle class="drift" cx="{gx}" cy="{gy}" r="260" fill="{tint}" opacity=".16" filter="url(#blur)"/>'
             f'<circle class="drift" cx="{gx + 160}" cy="{gy + 200}" r="200" fill="{PURPLE}" opacity=".09" filter="url(#blur)" style="animation-delay:-6s"/>'
             f'{body}</g><rect x="1" y="1" width="{w - 2}" height="{h - 2}" rx="16" fill="none" stroke="{BORDER}" stroke-width="2"/>')
 
@@ -73,7 +74,7 @@ def hero():
   <text x="100" y="162" font-size="76" font-weight="700" fill="{FG}" letter-spacing="-1">Mithil Batra</text>
   <text x="102" y="204" font-size="24" fill="{COMMENT}">Software Engineer · CSE @ NIT Delhi</text>
 </g>
-<text x="102" y="244" class="mono rise" font-size="15" fill="{BLUE}" letter-spacing="3" style="animation-delay:.25s">BACKEND / FULL-STACK / MACHINE LEARNING</text>'''
+<text x="102" y="244" class="mono rise" font-size="15" letter-spacing="3" style="animation-delay:.25s"><tspan fill="{BLUE}">BACKEND</tspan><tspan fill="{MUTED}"> / </tspan><tspan fill="{PURPLE}">FULL-STACK</tspan><tspan fill="{MUTED}"> / </tspan><tspan fill="{GREEN}">MACHINE LEARNING</tspan></text>'''
     defs = CARD + BLUR + grad('accent', [(0, BLUE), (1, PURPLE)], 0, 1)
     write('hero.svg', W, H, 'Mithil Batra — Software Engineer · CSE @ NIT Delhi', defs, CARD_CSS, card(W, H, (960, 40), body))
 
@@ -164,8 +165,8 @@ g, rect {{ animation-duration: {T:.2f}s; animation-iteration-count: infinite; an
 def stats():
     W, H, GAP, TH, HC, BASE = 860, 160, 16, 140, 56, 88
     TW = (W - 3 * GAP) / 4
-    tiles = [('800', '+', 'DSA PROBLEMS SOLVED', BLUE), ('99.467', '', 'JEE MAIN PERCENTILE', BLUE),
-             ('8.93', '', 'CGPA · NIT DELHI', BLUE), ('5376', '', 'JEE ADVANCED AIR', BLUE)]
+    tiles = [('800', '+', 'DSA PROBLEMS SOLVED', YELLOW), ('99.467', '', 'JEE MAIN PERCENTILE', BLUE),
+             ('8.93', '', 'CGPA · NIT DELHI', GREEN), ('5376', '', 'JEE ADVANCED AIR', PURPLE)]
     defs, body = [], []
     for i, (value, suffix, label, color) in enumerate(tiles):
         x = i * (TW + GAP)
@@ -202,6 +203,95 @@ def footer():
 <text x="600" y="102" text-anchor="middle" font-size="18" fill="{COMMENT}">Open to conversations about backend systems, machine learning and building products end to end.</text>
 <text x="600" y="134" text-anchor="middle" class="mono" font-size="15" fill="{BLUE}">mithil.batra05@gmail.com · linkedin.com/in/mithilbatra211205</text>'''
     write('footer.svg', W, H, 'Thanks for visiting. Open to conversations about backend systems, machine learning and building products end to end. mithil.batra05@gmail.com', CARD + BLUR, CARD_CSS, card(W, H, (200, 20), body))
+
+
+PROJECTS = [
+    dict(file='pitwall', accent=RED, kicker='01 · MACHINE LEARNING', name='Pit Wall', url='mithil-f1-pitwall.duckdns.org', shot='pitwall.jpg',
+         desc=['F1 podium prediction and analytics dashboard', 'built on live FastF1 timing and telemetry data.'],
+         points=['Walk-forward backtests across 3 seasons', 'Random Forest vs gradient boosting', 'Live FastF1 ingestion, daily retraining'],
+         stack=['Python', 'Flask', 'scikit-learn', 'FastF1', 'Docker']),
+    dict(file='resolvr', accent=YELLOW, kicker='02 · MOBILE · INCIDENT RESPONSE', name='Resolvr', url=None, shot=None,
+         desc=['Issue tracker plus incident escalation for', 'on-call teams: a mini Jira and mini xMatters.'],
+         points=['Mobile Kanban boards for issues', 'Instant alerts, one-tap acknowledgment', 'Auto-escalation when nobody responds'],
+         stack=['React Native', 'Expo', 'Node.js', 'Express', 'MongoDB']),
+    dict(file='interviewer', accent=GREEN, kicker='03 · GENERATIVE AI', name='AI Mock Interviewer', url='automated-ai-interviewer-nbog.vercel.app', shot='interviewer.jpg',
+         desc=['Mock interview platform that tailors questions', 'and grades answers with the Gemini API.'],
+         points=['Questions tailored to role and experience', 'Gemini-graded answers with feedback', 'Sessions and scores stored in PostgreSQL'],
+         stack=['Next.js', 'Tailwind CSS', 'Gemini API', 'PostgreSQL', 'Drizzle']),
+]
+
+
+def browser(x, y, w, url, shot):
+    """Browser window framing a real screenshot of the live site (16:10)."""
+    ih = w * 10 / 16
+    data = base64.b64encode((OUT / 'shots' / shot).read_bytes()).decode()
+    return (f'<clipPath id="shot"><path d="M{x} {y + 34}h{w}v{ih - 12}a12 12 0 0 1-12 12H{x + 12}a12 12 0 0 1-12-12z"/></clipPath>'
+            f'<rect x="{x}" y="{y}" width="{w}" height="{ih + 34}" rx="12" fill="{BG2}" stroke="{BORDER}" stroke-width="1.5"/>'
+            + ''.join(f'<circle cx="{x + 20 + i * 18}" cy="{y + 17}" r="5.5" fill="{c}"/>' for i, c in enumerate((RED, YELLOW, GREEN)))
+            + f'<rect x="{x + w / 2 - 150}" y="{y + 7}" width="300" height="20" rx="10" fill="{SURFACE}"/>'
+            f'<text x="{x + w / 2}" y="{y + 21}" text-anchor="middle" class="mono" font-size="12" fill="{COMMENT}">{escape(url)}</text>'
+            f'<image x="{x}" y="{y + 34}" width="{w}" height="{ih}" preserveAspectRatio="xMidYMin slice" clip-path="url(#shot)" href="data:image/jpeg;base64,{data}"/>')
+
+
+def phone(cx, y):
+    """Schematic of Resolvr's incidents screen, using the app's own status colours."""
+    w, h = 236, 420
+    x = cx - w / 2
+    sx, sw = x + 12, w - 24
+    cards = ''
+    for i, (status, color, button) in enumerate([('ACTIVE', '#e74c3c', True), ('ACKNOWLEDGED', '#f39c12', False), ('RESOLVED', '#27ae60', False)]):
+        cy = y + 118 + i * 92
+        ch = 82 if button else 70
+        cards += (f'<rect x="{sx + 10}" y="{cy}" width="{sw - 20}" height="{ch}" rx="8" fill="#fff"/>'
+                  f'<rect x="{sx + 10}" y="{cy}" width="4" height="{ch}" rx="2" fill="{color}"/>'
+                  f'<circle cx="{sx + 28}" cy="{cy + 16}" r="5" fill="{color}"/>'
+                  f'<text x="{sx + 38}" y="{cy + 20}" font-size="10" font-weight="700" fill="{color}">{status}</text>'
+                  f'<rect x="{sx + 24}" y="{cy + 32}" width="{sw - 60}" height="6" rx="3" fill="#bdc3c7"/>'
+                  f'<rect x="{sx + 24}" y="{cy + 46}" width="{sw - 100}" height="6" rx="3" fill="#dfe4e6"/>')
+        if button:
+            cards += (f'<rect x="{sx + 24}" y="{cy + 58}" width="{sw - 48}" height="18" rx="9" fill="#e74c3c"/>'
+                      f'<text x="{sx + sw / 2}" y="{cy + 71}" text-anchor="middle" font-size="9" font-weight="700" fill="#fff" letter-spacing="1">ACKNOWLEDGE</text>')
+    return (f'<rect x="{x}" y="{y}" width="{w}" height="{h}" rx="36" fill="#0b0d12" stroke="{BORDER}" stroke-width="2"/>'
+            f'<clipPath id="screen"><rect x="{sx}" y="{y + 12}" width="{sw}" height="{h - 24}" rx="26"/></clipPath><g clip-path="url(#screen)">'
+            f'<rect x="{sx}" y="{y + 12}" width="{sw}" height="{h - 24}" fill="#ecf0f1"/>'
+            f'<rect x="{sx}" y="{y + 12}" width="{sw}" height="94" fill="#fff"/>'
+            f'<rect x="{cx - 40}" y="{y + 20}" width="80" height="18" rx="9" fill="#0b0d12"/>'
+            f'<text x="{sx + 16}" y="{y + 66}" font-size="17" font-weight="700" fill="#2c3e50">Incidents</text>'
+            f'<text x="{sx + 16 + sw / 4}" y="{y + 96}" text-anchor="middle" font-size="11" font-weight="600" fill="#3498db">Active</text>'
+            f'<text x="{sx + 16 + 3 * sw / 4 - 32}" y="{y + 96}" text-anchor="middle" font-size="11" fill="#7f8c8d">Past</text>'
+            f'<rect x="{sx}" y="{y + 103}" width="{sw / 2}" height="3" fill="#3498db"/>'
+            f'{cards}</g>')
+
+
+def project_card(p):
+    W, H = 1200, 460
+    a = p['accent']
+    body = [f'<text x="56" y="92" class="mono" font-size="13" letter-spacing="3" fill="{a}">{escape(p["kicker"])}</text>',
+            f'<text x="56" y="146" font-size="44" font-weight="700" fill="{FG}">{escape(p["name"])}</text>']
+    body += [f'<text x="56" y="{188 + i * 28}" font-size="19" fill="{COMMENT}">{escape(line)}</text>' for i, line in enumerate(p['desc'])]
+    for i, point in enumerate(p['points']):
+        y = 274 + i * 34
+        body.append(f'<circle cx="62" cy="{y - 6}" r="4" fill="{a}"/><text x="78" y="{y}" font-size="17" fill="{FG}">{escape(point)}</text>')
+    x, y = 56, 370
+    for name in p['stack']:
+        w = len(name) * 8.2 + 28
+        if x + w > 520:
+            x, y = 56, y + 38
+        body.append(f'<rect x="{x}" y="{y}" width="{w:.0f}" height="30" rx="15" fill="{a}" fill-opacity=".1" stroke="{a}" stroke-opacity=".45"/>'
+                    f'<text x="{x + w / 2:.0f}" y="{y + 20}" text-anchor="middle" font-size="14" fill="{FG}">{escape(name)}</text>')
+        x += w + 8
+    if p['shot']:
+        body.append(browser(560, 43, 600, p['url'], p['shot']))
+    else:
+        body.append(phone(860, 20))
+        body.append(f'<text x="1010" y="440" class="mono" font-size="11" fill="{MUTED}">illustration</text>')
+    label = f'{p["name"]}: {" ".join(p["desc"])} ' + '; '.join(p['points']) + '. Built with ' + ', '.join(p['stack']) + '.'
+    write(f'project-{p["file"]}.svg', W, H, label, CARD + BLUR, '', card(W, H, (980, 230), ''.join(body), tint=a))
+
+
+def projects():
+    for p in PROJECTS:
+        project_card(p)
 
 
 STATS_QUERY = """query($login: String!) { user(login: $login) {
@@ -270,6 +360,6 @@ if __name__ == '__main__':
         OUT.mkdir(parents=True, exist_ok=True)
         github_stats(fetch_stats(os.environ.get('GITHUB_REPOSITORY_OWNER', 'Mithilbatra'), os.environ['GITHUB_TOKEN']))
     else:
-        for build in (hero, terminal, stats, footer):
+        for build in (hero, terminal, stats, projects, footer):
             build()
     print('wrote', ', '.join(sorted(p.name for p in OUT.glob('*.svg'))))
