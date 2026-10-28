@@ -68,15 +68,15 @@ CARD_CSS = """
 def hero():
     W, H = 1200, 320
     body = f'''
-<text x="1130" y="262" text-anchor="end" font-size="230" font-weight="800" fill="none" stroke="{BORDER}" stroke-width="1.5" letter-spacing="-8">MB</text>
+<text x="1120" y="258" text-anchor="end" font-size="220" font-weight="800" letter-spacing="6" fill="url(#accentX)" fill-opacity=".32">MB</text>
 <rect x="72" y="96" width="4" height="132" rx="2" fill="url(#accent)"/>
 <g class="rise">
   <text x="100" y="162" font-size="76" font-weight="700" fill="{FG}" letter-spacing="-1">Mithil Batra</text>
   <text x="102" y="204" font-size="24" fill="{COMMENT}">Software Engineer · CSE @ NIT Delhi</text>
 </g>
 <text x="102" y="244" class="mono rise" font-size="15" letter-spacing="3" style="animation-delay:.25s"><tspan fill="{BLUE}">BACKEND</tspan><tspan fill="{MUTED}"> / </tspan><tspan fill="{PURPLE}">FULL-STACK</tspan><tspan fill="{MUTED}"> / </tspan><tspan fill="{GREEN}">MACHINE LEARNING</tspan></text>'''
-    defs = CARD + BLUR + grad('accent', [(0, BLUE), (1, PURPLE)], 0, 1)
-    write('hero.svg', W, H, 'Mithil Batra — Software Engineer · CSE @ NIT Delhi', defs, CARD_CSS, card(W, H, (960, 40), body))
+    defs = CARD + BLUR + grad('accent', [(0, BLUE), (1, PURPLE)], 0, 1) + grad('accentX', [(0, BLUE), (1, PURPLE)])
+    write('hero.svg', W, H, 'Mithil Batra — Software Engineer · CSE @ NIT Delhi', defs, CARD_CSS, card(W, H, (980, 160), body))
 
 
 def mono_line(segs, x0, y, cw):

@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="320" viewBox="0 0 1200 320" role="img" aria-label="Mithil Batra — Software Engineer · CSE @ NIT Delhi">
 <title>Mithil Batra — Software Engineer · CSE @ NIT Delhi</title>
-<defs><linearGradient id="cardBg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0d1117"/><stop offset="1" stop-color="#161b22"/></linearGradient><pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1" fill="#30363d"/></pattern><filter id="blur" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="60"/></filter><linearGradient id="accent" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7aa2f7"/><stop offset="1" stop-color="#bb9af7"/></linearGradient></defs>
+<defs><linearGradient id="cardBg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0d1117"/><stop offset="1" stop-color="#161b22"/></linearGradient><pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1" fill="#30363d"/></pattern><filter id="blur" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="60"/></filter><linearGradient id="accent" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7aa2f7"/><stop offset="1" stop-color="#bb9af7"/></linearGradient><linearGradient id="accentX" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#7aa2f7"/><stop offset="1" stop-color="#bb9af7"/></linearGradient></defs>
 <style>
 text { font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; }
 .mono { font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace; }
@@ -12,8 +12,8 @@ text { font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Ne
 
 @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
 </style>
-<defs><clipPath id="frame"><rect width="1200" height="320" rx="16"/></clipPath></defs><g clip-path="url(#frame)"><rect width="1200" height="320" fill="url(#cardBg)"/><rect width="1200" height="320" fill="url(#dots)" opacity=".55"/><circle class="drift" cx="960" cy="40" r="260" fill="#7aa2f7" opacity=".16" filter="url(#blur)"/><circle class="drift" cx="1120" cy="240" r="200" fill="#bb9af7" opacity=".09" filter="url(#blur)" style="animation-delay:-6s"/>
-<text x="1130" y="262" text-anchor="end" font-size="230" font-weight="800" fill="none" stroke="#30363d" stroke-width="1.5" letter-spacing="-8">MB</text>
+<defs><clipPath id="frame"><rect width="1200" height="320" rx="16"/></clipPath></defs><g clip-path="url(#frame)"><rect width="1200" height="320" fill="url(#cardBg)"/><rect width="1200" height="320" fill="url(#dots)" opacity=".55"/><circle class="drift" cx="980" cy="160" r="260" fill="#7aa2f7" opacity=".16" filter="url(#blur)"/><circle class="drift" cx="1140" cy="360" r="200" fill="#bb9af7" opacity=".09" filter="url(#blur)" style="animation-delay:-6s"/>
+<text x="1120" y="258" text-anchor="end" font-size="220" font-weight="800" letter-spacing="6" fill="url(#accentX)" fill-opacity=".32">MB</text>
 <rect x="72" y="96" width="4" height="132" rx="2" fill="url(#accent)"/>
 <g class="rise">
   <text x="100" y="162" font-size="76" font-weight="700" fill="#e6edf3" letter-spacing="-1">Mithil Batra</text>
