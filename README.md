@@ -23,7 +23,7 @@
 </p>
 
 <p align="center">
-  🌱 Currently writing Mockito unit tests for <a href="https://github.com/YeamimHossainSajid/uber-doma-architecture"><b>uber-doma-architecture</b></a> &nbsp;·&nbsp;
+  🌱 Contributed Mockito unit tests to <a href="https://github.com/YeamimHossainSajid/uber-doma-architecture/pull/995"><b>uber-doma-architecture</b></a> (merged) &nbsp;·&nbsp;
   🏅 Deputy General Secretary, <b>GDSC NIT Delhi</b> &nbsp;·&nbsp;
   📫 <a href="mailto:mithil.batra05@gmail.com"><b>mithil.batra05@gmail.com</b></a>
 </p>

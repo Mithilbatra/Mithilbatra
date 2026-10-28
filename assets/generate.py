@@ -172,7 +172,7 @@ def terminal():
                             json_line('ml', ['Python', 'scikit-learn', 'Pandas', 'OpenCV']),
                             json_line('cloud', ['GCP', 'AWS', 'Azure', 'Docker'], last=True),
                             [('}', FG)]]),
-        ('cat oss.txt', [[('Writing Mockito unit tests for ', FG), ('uber-doma-architecture', CYAN, True)]]),
+        ('cat oss.txt', [[('Merged: Mockito unit tests for ', FG), ('uber-doma-architecture', CYAN, True), (' (#995)', COMMENT)]]),
         ('echo $MOTTO', [[('"Build it end to end."', YELLOW, True)]]),
     ]
     rows, typing, row, t = [], [], 0, 0.5  # rows: (time shown, markup); everything loops every T seconds
