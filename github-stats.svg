@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="210" viewBox="0 0 860 210" role="img" aria-label="GitHub activity: Contributions (last year) 229, Commits (last year) 102, Merged pull requests 29, Public repositories 19. Top languages: Jupyter Notebook, Python, TypeScript, JavaScript, Java, CSS">
+<title>GitHub activity: Contributions (last year) 229, Commits (last year) 102, Merged pull requests 29, Public repositories 19. Top languages: Jupyter Notebook, Python, TypeScript, JavaScript, Java, CSS</title>
+<defs></defs>
+<style>
+text { font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+.mono { font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace; }
+
+.h { font-size: 18px; font-weight: 600; fill: #e6edf3; }
+.k { font-size: 15px; fill: #8b949e; }
+.v { font-size: 17px; font-weight: 600; fill: #e6edf3; font-variant-numeric: tabular-nums; }
+.p { font-size: 14px; fill: #6e7681; font-variant-numeric: tabular-nums; }
+
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+</style>
+<rect x="1" y="1" width="858" height="208" rx="14" fill="#161b22" stroke="#30363d" stroke-width="1.5"/><text x="32" y="42" class="h">GitHub activity</text><text x="452" y="42" class="h">Top languages</text><line x1="420" y1="28" x2="420" y2="182" stroke="#30363d"/><text x="32" y="84" class="k">Contributions (last year)</text><text x="388" y="84" text-anchor="end" class="v">229</text><text x="32" y="116" class="k">Commits (last year)</text><text x="388" y="116" text-anchor="end" class="v">102</text><text x="32" y="148" class="k">Merged pull requests</text><text x="388" y="148" text-anchor="end" class="v">29</text><text x="32" y="180" class="k">Public repositories</text><text x="388" y="180" text-anchor="end" class="v">19</text><clipPath id="bar"><rect x="452" y="62" width="376" height="10" rx="5"/></clipPath><g clip-path="url(#bar)"><rect x="452.0" y="62" width="99.9" height="10" fill="#DA5B0B"/><rect x="551.4" y="62" width="89.6" height="10" fill="#3572A5"/><rect x="640.5" y="62" width="73.0" height="10" fill="#3178c6"/><rect x="713.0" y="62" width="50.4" height="10" fill="#f1e05a"/><rect x="762.9" y="62" width="38.4" height="10" fill="#b07219"/><rect x="800.8" y="62" width="12.7" height="10" fill="#663399"/><rect x="813.0" y="62" width="15.0" height="10" fill="#21262d"/></g><circle cx="457" cy="101" r="5" fill="#DA5B0B"/><text x="470" y="106" class="k">Jupyter Notebook<tspan class="p" dx="6">26.4%</tspan></text><circle cx="657" cy="101" r="5" fill="#3572A5"/><text x="670" y="106" class="k">Python<tspan class="p" dx="6">23.7%</tspan></text><circle cx="457" cy="131" r="5" fill="#3178c6"/><text x="470" y="136" class="k">TypeScript<tspan class="p" dx="6">19.3%</tspan></text><circle cx="657" cy="131" r="5" fill="#f1e05a"/><text x="670" y="136" class="k">JavaScript<tspan class="p" dx="6">13.3%</tspan></text><circle cx="457" cy="161" r="5" fill="#b07219"/><text x="470" y="166" class="k">Java<tspan class="p" dx="6">10.1%</tspan></text><circle cx="657" cy="161" r="5" fill="#663399"/><text x="670" y="166" class="k">CSS<tspan class="p" dx="6">3.2%</tspan></text>
+</svg>
