@@ -104,7 +104,8 @@ Software Engineering · Database Management Systems · Machine Learning · Artif
 ## Activity
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Mithilbatra/Mithilbatra/output/github-stats.svg" width="100%" alt="GitHub activity and top languages" />
+  <img src="https://raw.githubusercontent.com/Mithilbatra/Mithilbatra/profile-assets/github-stats.svg"
+     width="100%" alt="GitHub activity and top languages" />
 </p>
 
 <p align="center">
@@ -114,10 +115,13 @@ Software Engineering · Database Management Systems · Machine Learning · Artif
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Mithilbatra/Mithilbatra/output/snake-dark.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Mithilbatra/Mithilbatra/output/snake.svg" />
-    <img src="https://raw.githubusercontent.com/Mithilbatra/Mithilbatra/output/snake.svg" width="100%" alt="Contribution graph" />
-  </picture>
+  <source media="(prefers-color-scheme: dark)"
+          srcset="https://raw.githubusercontent.com/Mithilbatra/Mithilbatra/profile-assets/snake-dark.svg" />
+  <source media="(prefers-color-scheme: light)"
+          srcset="https://raw.githubusercontent.com/Mithilbatra/Mithilbatra/profile-assets/snake.svg" />
+  <img src="https://raw.githubusercontent.com/Mithilbatra/Mithilbatra/profile-assets/snake.svg"
+       width="100%" alt="Contribution graph" />
+</picture>
 </p>
 
 <p align="center">
