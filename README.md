@@ -125,6 +125,7 @@ Software Engineering · Database Management Systems · Machine Learning · Artif
     <img src="https://raw.githubusercontent.com/mithilbatra/mithilbatra/output/tulkun/tulkun.gif" width="640" alt="Mithilbatra's git-tulkun" />
   </a>
 </p>
+
 <p align="center">
   <img src="assets/footer.svg" width="100%" alt="Thanks for visiting. Open to conversations about backend systems, machine learning and building products end to end." />
 </p>
