@@ -24,7 +24,7 @@ Computer Science undergrad at **NIT Delhi** who builds things end to end, from S
 - Deputy General Secretary, **Google Developer Student Clubs**, NIT Delhi
 
 <p align="center">
-  <img src="assets/stats.svg" width="100%" alt="800+ DSA problems solved · 99.467 JEE Main percentile · 8.93 CGPA at NIT Delhi · JEE Advanced AIR 5376" />
+  <img src="assets/stats.svg" width="100%" alt="1000+ DSA problems solved · 99.467 JEE Main percentile · 8.93 CGPA at NIT Delhi · JEE Advanced AIR 5376" />
 </p>
 
 ## Experience
