@@ -72,7 +72,7 @@ More of my work lives in **[openCodes](https://github.com/Mithilbatra/openCodes)
 - **Quarter-finalist**, Flipkart Grid and L'Oréal Sustainability Challenge
 - **Deputy General Secretary**, Google Developer Student Clubs, NIT Delhi
 - **Executive**, Training and Placement Cell, NIT Delhi
-- **800+** problems solved across coding platforms
+- **1000+** problems solved across coding platforms
 
 <details>
   <summary><b>Certifications</b></summary>

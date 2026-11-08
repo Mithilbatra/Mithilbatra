@@ -165,7 +165,7 @@ g, rect {{ animation-duration: {T:.2f}s; animation-iteration-count: infinite; an
 def stats():
     W, H, GAP, TH, HC, BASE = 860, 160, 16, 140, 56, 88
     TW = (W - 3 * GAP) / 4
-    tiles = [('800', '+', 'DSA PROBLEMS SOLVED', YELLOW), ('99.467', '', 'JEE MAIN PERCENTILE', BLUE),
+    tiles = [('1000', '+', 'DSA PROBLEMS SOLVED', YELLOW), ('99.467', '', 'JEE MAIN PERCENTILE', BLUE),
              ('8.93', '', 'CGPA · NIT DELHI', GREEN), ('5376', '', 'JEE ADVANCED AIR', PURPLE)]
     defs, body = [], []
     for i, (value, suffix, label, color) in enumerate(tiles):
@@ -193,7 +193,7 @@ text {{ font-size: 44px; font-weight: 700; fill: {FG}; font-variant-numeric: tab
 .roll {{ animation: roll 2.4s cubic-bezier(.15,.75,.25,1) both; }}
 @keyframes roll {{ from {{ transform: translateY(0); }} }}
 '''
-    write('stats.svg', W, H, '800+ DSA problems solved · 99.467 JEE Main percentile · 8.93 CGPA at NIT Delhi · JEE Advanced AIR 5376', ''.join(defs), css, ''.join(body))
+    write('stats.svg', W, H, '1000+ DSA problems solved · 99.467 JEE Main percentile · 8.93 CGPA at NIT Delhi · JEE Advanced AIR 5376', ''.join(defs), css, ''.join(body))
 
 
 def footer():
