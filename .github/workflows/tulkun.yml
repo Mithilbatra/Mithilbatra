@@ -14,5 +14,5 @@ jobs:
     steps:
       - uses: PramudithaN/git-tulkun@v1
         with:
-          view: side     # side | dive | top
+          view: dive     # side | dive | top
           window: annual
