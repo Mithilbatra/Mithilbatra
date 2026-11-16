@@ -134,4 +134,4 @@ Software Engineering · Database Management Systems · Machine Learning · Artif
   <img src="assets/footer.svg" width="100%" alt="Thanks for visiting. Open to conversations about backend systems, machine learning and building products end to end." />
 </p>
 
-<!-- this is a comment -->
+<!-- this is a comment 1-->
